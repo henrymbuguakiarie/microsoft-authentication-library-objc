@@ -1,0 +1,1 @@
+This article was migrated to [docs.microsoft.com](https://docs.microsoft.com/en-us/azure/active-directory/develop/tutorial-v2-ios)

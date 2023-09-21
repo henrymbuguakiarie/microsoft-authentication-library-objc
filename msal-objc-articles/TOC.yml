@@ -1,2 +1,6 @@
-- name: Index
-  href: index.md
+- name: Microsoft Authentication Library for iOS and macOS
+  items:
+  - name: Getting started
+    items:
+    - name: Overview
+      href: index.md
