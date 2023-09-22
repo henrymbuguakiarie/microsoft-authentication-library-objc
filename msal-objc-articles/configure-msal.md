@@ -1,6 +1,7 @@
-## Configuring MSAL
+# Configuring MSAL
 
 ### Adding MSAL to your project
+
 1. Register your app in the [Azure portal](https://aka.ms/MobileAppReg)
 2. Make sure you register a redirect URI for your application. It should be in the following format: 
 
