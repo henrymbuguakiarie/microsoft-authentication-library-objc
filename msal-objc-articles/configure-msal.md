@@ -10,7 +10,7 @@
 
 ![](Images/keychain_example.png)
 
-See more information about [keychain groups](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-v2-keychain-objc) and [Silent SSO for MSAL](https://docs.microsoft.com/en-us/azure/active-directory/develop/single-sign-on-macos-ios).
+See more information about [keychain groups](/azure/active-directory/develop/howto-v2-keychain-objc) and [Silent SSO for MSAL](/azure/active-directory/develop/single-sign-on-macos-ios).
 
 #### iOS only steps:
 
@@ -38,7 +38,7 @@ Note that “msauthv3” scheme is needed when compiling your app with Xcode 11 
 	<string>msauthv3</string>
 </array>
 ```
-See more info about [configuring redirect uri for MSAL](https://docs.microsoft.com/en-us/azure/active-directory/develop/reply-url)
+See more info about [configuring redirect uri for MSAL](/azure/active-directory/develop/reply-url)
 
 3. To handle a callback, add the following to `appDelegate`:
 
@@ -107,7 +107,7 @@ Microsoft has recently released a new plug-in that uses the newly announced Appl
 
 MSAL 1.1.0 and above will use Microsoft Enterprise SSO plug-in automatically instead of the Microsoft Authenticator app when it is active on the device. To use Microsoft Enterprise SSO plug-in in your tenant, you need to enable it in your MDM profile. 
 
-See [more information](https://docs.microsoft.com/en-us/azure/active-directory/develop/apple-sso-plugin) about configuring Microsoft Enterprise SSO plug-in for your device [here](https://docs.microsoft.com/en-us/azure/active-directory/develop/apple-sso-plugin)
+See [more information](/azure/active-directory/develop/apple-sso-plugin) about configuring Microsoft Enterprise SSO plug-in for your device [here](/azure/active-directory/develop/apple-sso-plugin)
 
 ### Single Account Mode
 

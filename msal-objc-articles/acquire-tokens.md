@@ -18,15 +18,18 @@ ms.custom: aaddev
 # Using MSAL to acquire tokens
 
 ## Creating an Application Object
+
 Use the client ID from your app listing when initializing your MSALPublicClientApplication object:
 
 ### Swift
+
 ```swift
 let config = MSALPublicClientApplicationConfig(clientId: "<your-client-id-here>")
 let application = try? MSALPublicClientApplication(configuration: config) 
 ```
 
 ### Objective-C
+
 ```obj-c
 NSError *msalError = nil;
     
@@ -34,9 +37,11 @@ MSALPublicClientApplicationConfig *config = [[MSALPublicClientApplicationConfig 
 MSALPublicClientApplication *application = [[MSALPublicClientApplication alloc] initWithConfiguration:config error:&msalError];
     
 ```
+
 ## Acquiring Your First Token interactively
 
 #### Swift
+
 ```swift
 #if os(iOS)
 	let viewController = ... // Pass a reference to the view controller that should be used when getting a token interactively
@@ -61,6 +66,7 @@ application.acquireToken(with: interactiveParameters, completionBlock: { (result
 ```
 
 ### Objective-C
+
 ```obj-c
 #if TARGET_OS_IPHONE
     UIViewController *viewController = ...; // Pass a reference to the view controller that should be used when getting a token interactively
@@ -85,7 +91,9 @@ MSALInteractiveTokenParameters *interactiveParams = [[MSALInteractiveTokenParame
 	}
 }];
 ```
-> Our library uses the ASWebAuthenticationSession for authentication on iOS 12 by default. See more information about [default values, and support for other iOS versions](https://docs.microsoft.com/en-us/azure/active-directory/develop/customize-webviews).
+
+>[!NOTE]
+> Our library uses the ASWebAuthenticationSession for authentication on iOS 12 by default. See more information about [default values, and support for other iOS versions](/azure/active-directory/develop/customize-webviews).
 
 ## Silently Acquiring an Updated Token
 
@@ -144,9 +152,8 @@ MSALSilentTokenParameters *silentParams = [[MSALSilentTokenParameters alloc] ini
 }];
 ```
 
-
 ## Responding to an Interaction Required Error
 
 Occasionally user interaction will be required to get a new access token, when this occurs you will receive a `MSALErrorInteractionRequired` error when trying to silently acquire a new token. In those cases call `acquireToken:` with the same account and scopes as the failing `acquireTokenSilent:` call. It is recommended to display a status message to the user in an unobtrusive way before invoking interactive `acquireToken:` call.
 
-For more information, please see [MSAL error handling guide](https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-handling-exceptions).
+For more information, please see [MSAL error handling guide](/azure/active-directory/develop/msal-handling-exceptions).

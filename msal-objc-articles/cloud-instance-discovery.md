@@ -1,5 +1,21 @@
-# Cloud instance discovery: Instance aware flow
+---
+title: "Cloud instance discovery: Instance aware flow"
+description: "Some apps might need to work with multiple cloud instances at the same time depending on the account. In that case, instance aware flow might be useful."
+services: active-directory
+author: Dickson-Mwendia
+manager: CelesteDG
 
+ms.service: active-directory
+ms.subservice: develop
+ms.topic: conceptual
+ms.workload: identity
+ms.date: 09/22/2023
+ms.author: dmwendia
+ms.reviewer: oldalton, brianmel
+ms.custom: aaddev
+---
+
+# Cloud instance discovery: Instance aware flow
 
 Some apps might need to work with multiple cloud instances at the same time depending on the account.
 In that case, instance aware flow might be useful.
@@ -14,7 +30,7 @@ If developer wants to support discovery of accounts from sovereign cloud, e.g. G
 
 Note: Undefined behavior might happen if user tries to log in an account from sovereign cloud using a worldwide authority.
 
-```
+```obj-c
 NSDictionary *extraQueryParameters = @{@"instance_aware":@"true"};
 
 [application acquireTokenForScopes:kScopes
