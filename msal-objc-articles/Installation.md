@@ -1,4 +1,4 @@
-## Installation
+# Installing MSAL
  
 ### Using CocoaPods
 
@@ -69,6 +69,25 @@ github "AzureAD/microsoft-authentication-library-for-objc" == <latest_released_v
 With the debug information copied into the built products directory, Xcode will be able to symbolicate the stack trace whenever you stop at a breakpoint. This will also enable you to step through third-party code in the debugger.
 
 When archiving your application for submission to the App Store or TestFlight, Xcode will also copy these files into the dSYMs subdirectory of your application’s `.xcarchive` bundle.
+
+
+### Using Swift Packages
+
+You can add `MSAL` as a [swift package dependency](https://developer.apple.com/documentation/swift_packages/distributing_binary_frameworks_as_swift_packages).
+For MSAL version 1.1.14 and above, distribution of MSAL binary framework as a Swift package is available.
+
+1. For your project in Xcode, click File → Swift Packages → Add Package Dependency...
+2. Choose project to add dependency in
+3. Enter : https://github.com/AzureAD/microsoft-authentication-library-for-objc as the package repository URL
+4. Choose package options with :
+    1. Rules → Branch : main (For latest MSAL release)
+    2. Rules → Version → Exact : [release version >= 1.1.14] (For a particular release version)
+
+For any issues, please check if there is an outstanding SPM/Xcode bug.
+Workarounds for some bugs we encountered :
+* If you have a plugin in your project you might encounter [CFBundleIdentifier collision. Each bundle must have a unique bundle identifier](https://github.com/AzureAD/microsoft-authentication-library-for-objc/issues/737#issuecomment-767311138) error. [Workaround](https://github.com/AzureAD/microsoft-authentication-library-for-objc/issues/737#issuecomment-767990771)
+* While archiving, error : “IPA processing failed” UserInfo={NSLocalizedDescription=IPA processing failed}. [Workaround](https://github.com/AzureAD/microsoft-authentication-library-for-objc/issues/737#issuecomment-767990771)
+* For a macOS app, “Command CodeSign failed with a nonzero exit code” error. [Workaround](https://github.com/AzureAD/microsoft-authentication-library-for-objc/issues/737#issuecomment-770056675)
 
 ### Manually
 
