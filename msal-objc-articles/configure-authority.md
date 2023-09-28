@@ -36,13 +36,16 @@ To work with B2C, the [Microsoft Authentication Library (MSAL)](reference-v2-lib
 
 To support an arbitrary URL format for B2C, `MSALB2CAuthority` can be set with an arbitrary URL, like this:
 
-Objective-C
-```objc
+#### Objective-C
+
+```obj-c
 NSURL *authorityURL = [NSURL URLWithString:@"arbitrary URL"];
 MSALB2CAuthority *b2cAuthority = [[MSALB2CAuthority alloc] initWithURL:authorityURL
                                                                      error:&b2cAuthorityError];
 ```
-Swift
+
+#### Swift
+
 ```swift
 guard let authorityURL = URL(string: "arbitrary URL") else {
     // Handle error
@@ -55,15 +58,18 @@ All B2C authorities that don't use the default B2C authority format must be decl
 
 Add each different B2C authority to the known authorities list even if authorities only differ in policy.
 
-Objective-C
-```objc
+#### Objective-C
+
+```obj-c
 MSALPublicClientApplicationConfig *b2cApplicationConfig = [[MSALPublicClientApplicationConfig alloc]
                                                                initWithClientId:@"your-client-id"
                                                                redirectUri:@"your-redirect-uri"
                                                                authority:b2cAuthority];
 b2cApplicationConfig.knownAuthorities = @[b2cAuthority];
 ```
-Swift
+
+#### Swift
+
 ```swift
 let b2cApplicationConfig = MSALPublicClientApplicationConfig(clientId: "your-client-id", redirectUri: "your-redirect-uri", authority: b2cAuthority)
 b2cApplicationConfig.knownAuthorities = [b2cAuthority]
@@ -73,8 +79,9 @@ When your app requests a new policy, the authority URL needs to be changed becau
 
 To configure a B2C application, set `@property MSALAuthority *authority` with an instance of `MSALB2CAuthority` in `MSALPublicClientApplicationConfig` before creating `MSALPublicClientApplication`, like this:
 
-Objective-C
-```ObjC
+#### Objective-C
+
+```obj-c
     // Create B2C authority URL
     NSURL *authorityURL = [NSURL URLWithString:@"https://login.microsoftonline.com/tfp/contoso.onmicrosoft.com/B2C_1_SignInPolicy"];
     
@@ -102,7 +109,9 @@ Objective-C
         return;
     }
 ```
-Swift
+
+#### Swift
+
 ```swift
 do{
     // Create B2C authority URL
@@ -126,8 +135,9 @@ do{
 
 If your app runs in a sovereign cloud, you may need to change the authority URL in the `MSALPublicClientApplication`. The following example sets the authority URL to work with the German Microsoft Entra cloud:
 
-Objective-C
-```objc
+#### Objective-C
+
+```obj-c
     NSURL *authorityURL = [NSURL URLWithString:@"https://login.microsoftonline.de/common"];
     MSALAuthority *sovereignAuthority = [MSALAuthority authorityWithURL:authorityURL error:&authorityError];
     
@@ -152,7 +162,9 @@ Objective-C
         return;
     }
 ```
-Swift
+
+#### Swift
+
 ```swift
 do{
     guard let authorityURL = URL(string: "https://login.microsoftonline.de/common") else {
@@ -185,8 +197,9 @@ If you want to sign into the Contoso tenant, use;
 
 The following shows how to sign a user into the Contoso tenant:
 
-Objective-C
-```objc
+#### Objective-C
+
+```obj-c
     NSURL *authorityURL = [NSURL URLWithString:@"https://login.microsoftonline.com/contoso.onmicrosoft.com"];
     MSALAADAuthority *tenantedAuthority = [[MSALAADAuthority alloc] initWithURL:authorityURL error:&authorityError];
     
@@ -210,7 +223,9 @@ Objective-C
         return;
     }
 ```
-Swift
+
+#### Swift
+
 ```swift
 do{
     guard let authorityURL = URL(string: "https://login.microsoftonline.com/contoso.onmicrosoft.com") else {
@@ -247,4 +262,4 @@ The following are subclasses of `MSALAuthority` that you can instantiate dependi
 
 ## Next steps
 
-Learn more about [Authentication flows and application scenarios](authentication-flows-app-scenarios.md)
+Learn more about [Authentication flows and application scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios)
