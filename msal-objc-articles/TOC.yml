@@ -4,10 +4,8 @@
     items:
     - name: Overview
       href: index.md
-    - name: Install MSAL
-      href: installation.md
-    - name: Configure MSAL
-      href: configure-msal.md
+    - name: Install MSAL and configure your project
+      href: install-and-configure-msal.md
     - name: Configure authority
       href: configure-authority.md
     - name: Configure redirect URI
