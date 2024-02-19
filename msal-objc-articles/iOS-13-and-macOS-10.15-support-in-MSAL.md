@@ -1,4 +1,11 @@
-# 
+ms.service: msal
+ms.subservice: msal-ios-mac
+ms.topic: conceptual
+ms.date: 02/19/2024
+ms.author: dmwendia
+ms.reviewer: oldalton, brianmel
+ms.custom: aaddev
+---
 
 
 If your app requires conditional access or certificate authentication support, you must set up your MSAL to be able to talk to the Azure Authenticator app.

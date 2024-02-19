@@ -5,12 +5,12 @@ services: active-directory
 author: OwenRichards1
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
-ms.workload: identity
+ms.service: msal
+ms.subservice: msal-ios-mac
 ms.topic: conceptual
-ms.date: 08/28/2019
+ms.date: 02/19/2024
 ms.author: owenrichards
+ms.reviewer: oldalton, brianmel
 ms.custom: aaddev
 ---
 

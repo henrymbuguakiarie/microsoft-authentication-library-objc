@@ -1,6 +1,23 @@
-# Installing MSAL
+---
+title: Install and configure MSAL for iOS/macOS
+description: Learn how to install MSAL and configure your project to use the library
+services: active-directory
+author: Dickson-Mwendia
+manager: CelesteDG
+
+ms.service: active-directory
+ms.subservice: develop
+ms.topic: conceptual
+ms.workload: identity
+ms.date: 09/22/2023
+ms.author: dmwendia
+ms.reviewer: oldalton, brianmel
+ms.custom: aaddev
+---
+
+# Install MSAL and configure your project to use the library
  
-### Using CocoaPods
+## Installing  using CocoaPods
 
 #### Installing CocoaPods
 [CocoaPods](https://cocoapods.org) is a dependency manager for Swift and Objective-C Cocoa projects.
@@ -32,7 +49,7 @@ Subsequent calls to `pod update` will update to the latest released version of M
 
 See [CocoaPods](https://guides.cocoapods.org/using/the-podfile.html) for more information on setting up a PodFile
 
-### Using Carthage
+## Installing using Carthage
 
 [Carthage](https://github.com/Carthage/Carthage) is another popular dependency manager MSAL supports. 
 The following is a sample using Carthage.
@@ -71,7 +88,7 @@ With the debug information copied into the built products directory, Xcode will 
 When archiving your application for submission to the App Store or TestFlight, Xcode will also copy these files into the dSYMs subdirectory of your application’s `.xcarchive` bundle.
 
 
-### Using Swift Packages
+## Installing MSAL using Swift Packages
 
 You can add `MSAL` as a [swift package dependency](https://developer.apple.com/documentation/swift_packages/distributing_binary_frameworks_as_swift_packages).
 For MSAL version 1.1.14 and above, distribution of MSAL binary framework as a Swift package is available.
@@ -85,11 +102,12 @@ For MSAL version 1.1.14 and above, distribution of MSAL binary framework as a Sw
 
 For any issues, please check if there is an outstanding SPM/Xcode bug.
 Workarounds for some bugs we encountered :
+
 * If you have a plugin in your project you might encounter [CFBundleIdentifier collision. Each bundle must have a unique bundle identifier](https://github.com/AzureAD/microsoft-authentication-library-for-objc/issues/737#issuecomment-767311138) error. [Workaround](https://github.com/AzureAD/microsoft-authentication-library-for-objc/issues/737#issuecomment-767990771)
 * While archiving, error : “IPA processing failed” UserInfo={NSLocalizedDescription=IPA processing failed}. [Workaround](https://github.com/AzureAD/microsoft-authentication-library-for-objc/issues/737#issuecomment-767990771)
 * For a macOS app, “Command CodeSign failed with a nonzero exit code” error. [Workaround](https://github.com/AzureAD/microsoft-authentication-library-for-objc/issues/737#issuecomment-770056675)
 
-### Manually
+## Install MSAL manually
 
 1. Check out the repository using the following command.
 ```
@@ -99,7 +117,7 @@ git clone https://github.com/AzureAD/microsoft-authentication-library-for-objc.g
 2. In your project, drag and add `microsoft-authentication-library-for-objc/MSAL/MSAL.xcodeproj`
 3. In your project settings, for the target application, select `Build Phases` and add MSAL in `Target Dependencies`.
 
-### Using Git Submodule
+## Install MSAL using Git Submodule
 
 If your project is managed in a git repository you can include MSAL as a git submodule. First check the GitHub Releases Page for the latest release tag. Replace <latest_release_tag> with that version.
 
@@ -112,9 +130,10 @@ If your project is managed in a git repository you can include MSAL as a git sub
 * `git commit -m "Use MSAL git submodule at <latest_release_tag>"`
 * `git push`
 
-## Configuring MSAL
+## Configuring your project to use MSAL
 
 ### Adding MSAL to your project
+
 1. Register your app in the [Azure portal](https://aka.ms/MobileAppReg)
 2. Make sure you register a redirect URI for your application. It should be in the following format: 
 
@@ -141,6 +160,7 @@ See more information about [keychain groups](https://docs.microsoft.com/en-us/az
     </dict>
 </array>
 ```
+
 2. Add `LSApplicationQueriesSchemes` to allow making call to Microsoft Authenticator if installed.
 
 Note that “msauthv3” scheme is needed when compiling your app with Xcode 11 and later. 
@@ -157,6 +177,7 @@ See more info about [configuring redirect uri for MSAL](https://docs.microsoft.c
 3. To handle a callback, add the following to `appDelegate`:
 
 #### Swift
+
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         
@@ -165,6 +186,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 ```
 
 #### Objective-C
+
 ```obj-c
 - (BOOL)application:(UIApplication *)app
             openURL:(NSURL *)url
@@ -207,9 +229,6 @@ func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>)
 #### macOS only steps:
 
 1. Make sure your application is signed with a valid development certificate. While MSAL will still work in the unsigned mode, it will behave differently around cache persistence.
-
-
-
 
 ### Microsoft Enterprise SSO plug-in for Apple devices
 
@@ -264,7 +283,7 @@ MSAL also provides a public API to query multiple accounts, granted that they ex
 
 2) Create config, then use it to initialize an application object 
 
-3) Also initialize MSALAccountEnumerationParameters object with the account identifier. Each MSALAccount object has a parameter called “identifier”, which represents the unique account identifier associated with the given MSALAccount object. We recommend using it as the primary search criterion. 
+3) Also initialize `MSALAccountEnumerationParameters`` object with the account identifier. Each MSALAccount object has a parameter called “identifier”, which represents the unique account identifier associated with the given MSALAccount object. We recommend using it as the primary search criterion. 
 
 4) Then invoke the API "accountsFromDeviceForParameters" from the application object using the enumeration parameter. If you have multiple accounts in MSAL cache, it will return an array containing MSALAccounts that have the account identifier you specified in the previous step. 
 

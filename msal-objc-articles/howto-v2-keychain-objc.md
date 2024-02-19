@@ -5,14 +5,13 @@ services: active-directory
 author: OwenRichards1
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
-ms.workload: identity
-ms.topic: how-to
-ms.date: 12/19/2022
+ms.service: msal
+ms.subservice: msal-ios-mac
+ms.topic: conceptual
+ms.date: 02/19/2024
 ms.author: owenrichards
-ms.reviewer: oldalton
-ms.custom: aaddev, has-adal-ref, engagement-fy23
+ms.reviewer: oldalton, brianmel
+ms.custom: aaddev
 ---
 
 # Configure keychain

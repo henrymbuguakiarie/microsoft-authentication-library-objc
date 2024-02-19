@@ -5,13 +5,12 @@ services: active-directory
 author: henrymbuguakiarie
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-ios-mac
 ms.topic: conceptual
-ms.workload: identity
-ms.date: 11/26/2020
+ms.date: 02/19/2024
 ms.author: henrymbugua
-ms.reviewer: saeeda, oldalton
+ms.reviewer: oldalton, brianmel
 ms.custom: aaddev
 ---
 # Handle errors and exceptions in MSAL for iOS/macOS

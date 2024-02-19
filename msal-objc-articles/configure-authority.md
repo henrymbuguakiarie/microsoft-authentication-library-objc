@@ -5,13 +5,12 @@ services: active-directory
 author: cilwerner
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
-ms.workload: identity
+ms.service: msal
+ms.subservice: msal-ios-mac
 ms.topic: conceptual
-ms.date: 05/09/2023
-ms.author: cwerner
-ms.reviewer: oldalton
+ms.date: 02/19/2024
+ms.author: dmwendia
+ms.reviewer: oldalton, brianmel
 ms.custom: aaddev
 ---
 

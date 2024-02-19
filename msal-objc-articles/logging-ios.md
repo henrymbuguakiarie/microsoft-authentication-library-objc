@@ -5,13 +5,12 @@ services: active-directory
 author: henrymbuguakiarie
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-ios-mac
 ms.topic: conceptual
-ms.workload: identity
-ms.date: 01/25/2021
+ms.date: 02/19/2024
 ms.author: henrymbugua
-ms.reviewer: saeeda, jmprieur
+ms.reviewer: oldalton, brianmel
 ms.custom: aaddev
 ---
 

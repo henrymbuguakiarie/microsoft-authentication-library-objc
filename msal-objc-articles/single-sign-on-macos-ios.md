@@ -5,14 +5,13 @@ services: active-directory
 author: henrymbuguakiarie
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-ios-mac
 ms.topic: conceptual
-ms.workload: identity
-ms.date: 05/03/2023
+ms.date: 02/19/2024
 ms.author: henrymbugua
-ms.reviewer:
-ms.custom: aaddev, engagement-fy23
+ms.reviewer: oldalton, brianmel
+ms.custom: aaddev
 ---
 
 # Configure SSO on macOS and iOS

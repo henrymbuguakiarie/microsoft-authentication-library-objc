@@ -5,14 +5,13 @@ services: active-directory
 author: henrymbuguakiarie
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-ios-mac
 ms.topic: conceptual
-ms.workload: identity
-ms.date: 08/28/2019
+ms.date: 02/19/2024
 ms.author: henrymbugua
-ms.reviewer: 
-ms.custom: aaddev, has-adal-ref
+ms.reviewer: oldalton, brianmel
+ms.custom: aaddev
 ---
 
 # How to: SSO between ADAL and MSAL apps on macOS and iOS
