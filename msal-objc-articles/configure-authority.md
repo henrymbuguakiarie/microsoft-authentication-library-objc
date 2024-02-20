@@ -261,4 +261,4 @@ The following are subclasses of `MSALAuthority` that you can instantiate dependi
 
 ## Next steps
 
-Learn more about [Authentication flows and application scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios)
+Learn more about [Authentication flows and application scenarios](/entra/identity-platform/authentication-flows-app-scenarios)

@@ -11,7 +11,6 @@ ms.topic: conceptual
 ms.date: 02/19/2024
 ms.author: dmwendia
 ms.reviewer: oldalton, brianmel
-ms.custom: aaddev
 ---
 
 # Using MSAL to acquire tokens
@@ -92,7 +91,7 @@ MSALInteractiveTokenParameters *interactiveParams = [[MSALInteractiveTokenParame
 ```
 
 >[!NOTE]
-> Our library uses the ASWebAuthenticationSession for authentication on iOS 12 by default. See more information about [default values, and support for other iOS versions](/azure/active-directory/develop/customize-webviews).
+> Our library uses the ASWebAuthenticationSession for authentication on iOS 12 by default. See more information about [default values, and support for other iOS versions](/entra/identity-platform/customize-webviews).
 
 ## Acquiring a token silently
 
@@ -155,4 +154,4 @@ MSALSilentTokenParameters *silentParams = [[MSALSilentTokenParameters alloc] ini
 
 Occasionally user interaction will be required to get a new access token, when this occurs you will receive a `MSALErrorInteractionRequired` error when trying to silently acquire a new token. In those cases call `acquireToken:` with the same account and scopes as the failing `acquireTokenSilent:` call. It is recommended to display a status message to the user in an unobtrusive way before invoking interactive `acquireToken:` call.
 
-For more information, please see [MSAL error handling guide](/azure/active-directory/develop/msal-handling-exceptions).
+For more information, please see [MSAL error handling guide](/entra/identity-platform/msal-handling-exceptions).
