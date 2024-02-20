@@ -1,3 +1,10 @@
+---
+title: Support for iOS 13 in MSAL
+description: Learn ABOUT support for iOS 13 in MSAL
+services: active-directory
+author: Dickson-Mwendia
+manager: CelesteDG
+
 ms.service: msal
 ms.subservice: msal-ios-mac
 ms.topic: conceptual
@@ -7,6 +14,7 @@ ms.reviewer: oldalton, brianmel
 ms.custom: aaddev
 ---
 
+# Support for iOS 13 in MSAL
 
 If your app requires conditional access or certificate authentication support, you must set up your MSAL to be able to talk to the Azure Authenticator app.
 

@@ -41,7 +41,7 @@ This type of SSO is currently not available on macOS. MSAL on macOS only support
 
 MSAL Objective-C support migration and SSO with ADAL Objective-C-based apps. The apps must be distributed by the same Apple Developer.
 
-See [SSO between ADAL and MSAL apps on macOS and iOS](sso-between-adal-msal-apps-macos-ios.md) for instructions for cross-app SSO between ADAL and MSAL-based apps.
+See [SSO between ADAL and MSAL apps on macOS and iOS](sso-between-adal-msal-apps.md) for instructions for cross-app SSO between ADAL and MSAL-based apps.
 
 ## Silent SSO between apps
 

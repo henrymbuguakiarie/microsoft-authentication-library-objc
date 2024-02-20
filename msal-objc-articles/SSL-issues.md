@@ -16,7 +16,7 @@ ms.custom: aaddev
 
 # Troubleshoot MSAL for iOS and macOS TLS/SSL issues
 
-This article provides information to help you troubleshoot issues that you may come across while using the [Microsoft Authentication Library (MSAL) for iOS and macOS](reference-v2-libraries.md)
+This article provides information to help you troubleshoot issues that you may come across while using the Microsoft Authentication Library (MSAL) for iOS and macOS.
 
 ## Network issues
 

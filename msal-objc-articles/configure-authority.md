@@ -258,7 +258,3 @@ The following are subclasses of `MSALAuthority` that you can instantiate dependi
 ### MSALB2CAuthority
 
 `MSALB2CAuthority` represents a B2C authority. By default, the B2C authority URL should be in the following format, where `<port>` is optional: `https://<host>:<port>/tfp/<tenant>/<policy>`. However, MSAL also supports other arbitrary B2C authority formats.
-
-## Next steps
-
-Learn more about [Authentication flows and application scenarios](/entra/identity-platform/authentication-flows-app-scenarios)

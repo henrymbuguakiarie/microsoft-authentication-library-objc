@@ -120,9 +120,3 @@ parameters.claimsRequest = request
 application.acquireToken(with: parameters) { (result: MSALResult?, error: Error?) in            ...
 
 ```
-
-
-
-## Next steps
-
-Learn more about [Authentication flows and application scenarios](authentication-flows-app-scenarios.md)
