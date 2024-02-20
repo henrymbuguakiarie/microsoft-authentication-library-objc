@@ -207,7 +207,3 @@ func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>)
         MSALPublicClientApplication.handleMSALResponse(url, sourceApplication: sourceApp)
     }
 ```
-
-## Next steps
-
-Learn more about [Authentication flows and application scenarios](authentication-flows-app-scenarios.md)
