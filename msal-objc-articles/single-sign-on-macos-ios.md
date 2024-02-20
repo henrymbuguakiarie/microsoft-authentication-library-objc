@@ -5,14 +5,13 @@ services: active-directory
 author: henrymbuguakiarie
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-ios-mac
 ms.topic: conceptual
-ms.workload: identity
-ms.date: 05/03/2023
+ms.date: 02/19/2024
 ms.author: henrymbugua
-ms.reviewer:
-ms.custom: aaddev, engagement-fy23
+ms.reviewer: oldalton, brianmel
+ms.custom: aaddev
 ---
 
 # Configure SSO on macOS and iOS
@@ -42,7 +41,7 @@ This type of SSO is currently not available on macOS. MSAL on macOS only support
 
 MSAL Objective-C support migration and SSO with ADAL Objective-C-based apps. The apps must be distributed by the same Apple Developer.
 
-See [SSO between ADAL and MSAL apps on macOS and iOS](sso-between-adal-msal-apps-macos-ios.md) for instructions for cross-app SSO between ADAL and MSAL-based apps.
+See [SSO between ADAL and MSAL apps on macOS and iOS](sso-between-adal-msal-apps.md) for instructions for cross-app SSO between ADAL and MSAL-based apps.
 
 ## Silent SSO between apps
 
@@ -208,7 +207,3 @@ func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>)
         MSALPublicClientApplication.handleMSALResponse(url, sourceApplication: sourceApp)
     }
 ```
-
-## Next steps
-
-Learn more about [Authentication flows and application scenarios](authentication-flows-app-scenarios.md)

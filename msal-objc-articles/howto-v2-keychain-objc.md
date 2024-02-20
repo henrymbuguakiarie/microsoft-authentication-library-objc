@@ -5,19 +5,18 @@ services: active-directory
 author: OwenRichards1
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
-ms.workload: identity
-ms.topic: how-to
-ms.date: 12/19/2022
+ms.service: msal
+ms.subservice: msal-ios-mac
+ms.topic: conceptual
+ms.date: 02/19/2024
 ms.author: owenrichards
-ms.reviewer: oldalton
-ms.custom: aaddev, has-adal-ref, engagement-fy23
+ms.reviewer: oldalton, brianmel
+ms.custom: aaddev
 ---
 
 # Configure keychain
 
-When the [Microsoft Authentication Library for iOS and macOS](msal-overview.md) (MSAL) signs in a user, or refreshes a token, it tries to cache tokens in the keychain. Caching tokens in the keychain allows MSAL to provide silent single sign-on (SSO) between multiple apps that are distributed by the same Apple developer. SSO is achieved via the keychain access groups functionality. For more information, see Apple's [Keychain Items documentation](https://developer.apple.com/documentation/security/keychain_services/keychain_items/sharing_access_to_keychain_items_among_a_collection_of_apps?language=objc).
+When the Microsoft Authentication Library (MSAL) for iOS and macOS signs in a user, or refreshes a token, it tries to cache tokens in the keychain. Caching tokens in the keychain allows MSAL to provide silent single sign-on (SSO) between multiple apps that are distributed by the same Apple developer. SSO is achieved via the keychain access groups functionality. For more information, see Apple's [Keychain Items documentation](https://developer.apple.com/documentation/security/keychain_services/keychain_items/sharing_access_to_keychain_items_among_a_collection_of_apps?language=objc).
 
 This article covers how to configure app entitlements so that MSAL can write cached tokens to iOS and macOS keychain.
 

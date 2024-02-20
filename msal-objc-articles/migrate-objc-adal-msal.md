@@ -1,18 +1,17 @@
 ---
-title: ADAL to MSAL migration guide (MSAL iOS/macOS)
+title: ADAL to MSAL migration guide for iOS and macOS
 description: Learn the differences between MSAL for iOS/macOS and the Azure AD Authentication Library for Objective-C (ADAL.ObjC) and how to migrate to MSAL for iOS/macOS.
 services: active-directory
-author: OwenRichards1
+author: Dickson-Mwendia
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-ios-mac
 ms.topic: conceptual
-ms.workload: identity
-ms.date: 08/28/2019
-ms.author: owenrichards
-ms.reviewer: oldalton
-ms.custom: aaddev, has-adal-ref
+ms.date: 02/19/2024
+ms.author: dmwendia
+ms.reviewer: oldalton, brianmel
+ms.custom: aaddev
 #Customer intent: As an application developer, I want to learn about the differences between the Objective-C ADAL and MSAL for iOS and macOS libraries so I can migrate my applications to MSAL for iOS and macOS.
 ---
 
@@ -20,7 +19,7 @@ ms.custom: aaddev, has-adal-ref
 
 The Azure Active Directory Authentication Library ([ADAL Objective-C](https://github.com/AzureAD/azure-activedirectory-library-for-objc)) was created to work with  Microsoft Entra accounts via the v1.0 endpoint.
 
-The Microsoft Authentication Library for iOS and macOS (MSAL) is built to work with all Microsoft identities such as Microsoft Entra accounts, personal Microsoft accounts, and Azure AD B2C accounts via the Microsoft identity platform (formally the Azure AD v2.0 endpoint).
+The Microsoft Authentication Library for iOS and macOS (MSAL) is built to work with all Microsoft identities such as Microsoft Entra accounts, personal Microsoft accounts, and Azure AD B2C accounts via the Microsoft identity platform (formerly the Azure AD v2.0 endpoint).
 
 The Microsoft identity platform has a few key differences with Azure AD v1.0. This article highlights these differences and provides guidance to migrate an app from ADAL to MSAL.
 
@@ -38,7 +37,7 @@ The Microsoft identity platform has a few key differences with Azure AD v1.0. Th
 
 ### Incremental and dynamic consent
 
-* The Microsoft identity platform allows you to request permissions dynamically. Apps can ask for permissions only as needed and request more as the app needs them. For more information, see [permissions and consent](./permissions-consent-overview.md#consent).
+* The Microsoft identity platform allows you to request permissions dynamically. Apps can ask for permissions only as needed and request more as the app needs them. For more information, see [permissions and consent](/entra/identity-platform/permissions-consent-overview#consent).
 
 ## ADAL and MSAL library differences
 
@@ -70,7 +69,7 @@ This is the built-in scope for every application. It refers to the static list o
 
 To use the `/.default` scope, append `/.default` to the resource identifier. For example: `https://graph.microsoft.com/.default`. If your resource ends with a slash (`/`), you should still append `/.default`, including the leading forward slash, resulting in a scope that has a double forward slash (`//`) in it.
 
-You can read more information about using the "/.default" scope [here](./permissions-consent-overview.md).
+You can read more information about using the "/.default" scope in [permissions and scopes](/entra/identity-platform/scopes-oidc).
 
 ### Supporting different WebView types & browsers
 
@@ -110,7 +109,7 @@ If the account is found, the developer should use the account to do silent token
 
 Although it's possible to continue using ADAL's `userId` for all operations in MSAL, since `userId` is based on UPN, it's subject to multiple limitations that result in a bad user experience. For example, if the UPN changes, the user has to sign in again. We recommend all apps use the non-displayable account `identifier` for all operations.
 
-Read more about [cache state migration](sso-between-adal-msal-apps-macos-ios.md).
+Read more about [cache state migration](sso-between-adal-msal-apps.md).
 
 ### Token acquisition changes
 
@@ -129,7 +128,7 @@ MSAL provides more clarity between errors that can be handled by your app and th
 
 Handling all other errors in the [`MSALError` list](https://github.com/AzureAD/microsoft-authentication-library-for-objc/blob/master/MSAL/src/public/MSALError.h#L128) is optional. You could use the information in those errors to improve the user experience.
 
-See [Handling exceptions and errors using MSAL](msal-error-handling-ios.md) for more about MSAL error handling.
+See [Handling exceptions and errors using MSAL](error-handling-ios.md) for more about MSAL error handling.
 
 ### Broker support
 
@@ -457,8 +456,6 @@ application.acquireTokenSilent(with: silentParameters) {
 }
 ```
 
-
-
 ## Next steps
 
-Learn more about [Authentication flows and application scenarios](authentication-flows-app-scenarios.md)
+Learn more about [Authentication flows and application scenarios](/entra/identity-platform/authentication-flows-app-scenarios)

@@ -5,14 +5,13 @@ services: active-directory
 author: henrymbuguakiarie
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
-ms.topic: how-to
-ms.workload: identity
-ms.date: 01/18/2023
+ms.service: msal
+ms.subservice: msal-ios-mac
+ms.topic: conceptual
+ms.date: 02/19/2024
 ms.author: henrymbugua
-ms.reviewer: jak
-ms.custom: aaddev, has-adal-ref
+ms.reviewer: oldalton, brianmel
+ms.custom: aaddev
 #Customer intent: As an application developer, I want to learn about how to use redirect URIs.
 ---
 
@@ -129,4 +128,4 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 
 ## Next steps
 
-Learn more about [Authentication flows and application scenarios](authentication-flows-app-scenarios.md)
+Learn more about [Authentication flows and application scenarios](/entra/identity-platform/authentication-flows-app-scenarios.md)

@@ -5,13 +5,12 @@ services: active-directory
 author: henrymbuguakiarie
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-ios-mac
 ms.topic: conceptual
-ms.workload: identity
-ms.date: 05/16/2023
+ms.date: 02/19/2024
 ms.author: henrymbugua
-ms.reviewer: brandwe, akgoel23
+ms.reviewer: oldalton, brianmel
 ms.custom: aaddev
 ---
 
@@ -22,11 +21,11 @@ ms.custom: aaddev
 
 Frontline workers such as retail associates, flight crew members, and field service workers often use a shared mobile device to perform their work. These shared devices can present security risks if your users share their passwords or PINs, intentionally or not, to access customer and business data on the shared device.
 
-[Shared device mode](msal-shared-devices.md) allows you to configure an iOS 14 or higher device to be more easily and securely shared by employees. Employees can sign-in once and get single sign-on (SSO) to all apps that support this feature, giving them faster access to information. When they're finished with their shift or task, they can sign out of the device through any supported app that also signs them out from all apps supporting this feature, and the device is immediately ready for use by the next employee with no access to previous user's data.
+[Shared device mode](/entra/identity-platform/msal-shared-devices) allows you to configure an iOS 14 or higher device to be more easily and securely shared by employees. Employees can sign-in once and get single sign-on (SSO) to all apps that support this feature, giving them faster access to information. When they're finished with their shift or task, they can sign out of the device through any supported app that also signs them out from all apps supporting this feature, and the device is immediately ready for use by the next employee with no access to previous user's data.
 
 To take advantage of shared device mode feature, app developers and cloud device admins work together:
 
-1. **Device administrators** prepare the device to be shared by using a mobile device management (MDM) provider like Microsoft Intune. The MDM pushes the [Microsoft Authenticator app](https://support.microsoft.com/account-billing/how-to-use-the-microsoft-authenticator-app-9783c865-0308-42fb-a519-8cf666fe0acc) to the devices and turns on "Shared Mode" for each device through a profile update to the device. This Shared Mode setting is what changes the behavior of the supported apps on the device. This configuration from the MDM provider sets the shared device mode for the device and enables the [Microsoft Enterprise SSO plug-in for Apple devices](apple-sso-plugin.md) that is required for shared device mode. To learn more about SSO extensions, see the [Apple video](https://developer.apple.com/videos/play/tech-talks/301/).
+1. **Device administrators** prepare the device to be shared by using a mobile device management (MDM) provider like Microsoft Intune. The MDM pushes the [Microsoft Authenticator app](https://support.microsoft.com/account-billing/how-to-use-the-microsoft-authenticator-app-9783c865-0308-42fb-a519-8cf666fe0acc) to the devices and turns on "Shared Mode" for each device through a profile update to the device. This Shared Mode setting is what changes the behavior of the supported apps on the device. This configuration from the MDM provider sets the shared device mode for the device and enables the [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin) that is required for shared device mode. To learn more about SSO extensions, see the [Apple video](https://developer.apple.com/videos/play/tech-talks/301/).
 
 2. **Application developers** write a single-account app (multiple-account apps aren't supported in shared device mode) to handle the following scenario:
 
@@ -42,7 +41,7 @@ To take advantage of shared device mode feature, app developers and cloud device
 
 ## Set up device in Shared Device Mode
 
-Your device needs to be configured to support shared device mode. It must have iOS 14+ installed and be MDM-enrolled. MDM configuration also needs to enable [Microsoft Enterprise SSO plug-in for Apple devices](apple-sso-plugin.md).
+Your device needs to be configured to support shared device mode. It must have iOS 14+ installed and be MDM-enrolled. MDM configuration also needs to enable [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin).
 
 Microsoft Intune supports zero-touch provisioning for devices in Microsoft Entra shared device mode, which means that the device can be set up and enrolled in Intune with minimal interaction from the frontline worker. To set up device in shared device mode when using Microsoft Intune as the MDM, see [Set up enrollment for devices in Microsoft Entra shared device mode](/mem/intune/enrollment/automated-device-enrollment-shared-device-mode/).
 
@@ -196,7 +195,7 @@ signoutParameters.signoutFromBrowser = YES; // To trigger a browser signout in S
 }];
 ```
 
-The [Microsoft Enterprise SSO plug-in for Apple devices](apple-sso-plugin.md) clears state only for applications. It doesn't clear state on the Safari browser. You can use the optional `signoutFromBrowser` property shown in code snippets to trigger a browser sign out in Safari. This causes the browser to briefly launch on the device.
+The [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin) clears state only for applications. It doesn't clear state on the Safari browser. You can use the optional `signoutFromBrowser` property shown in code snippets to trigger a browser sign out in Safari. This causes the browser to briefly launch on the device.
 
 ### Receive broadcast to detect global sign out initiated from other applications
 

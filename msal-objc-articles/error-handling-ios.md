@@ -5,13 +5,12 @@ services: active-directory
 author: henrymbuguakiarie
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-ios-mac
 ms.topic: conceptual
-ms.workload: identity
-ms.date: 11/26/2020
+ms.date: 02/19/2024
 ms.author: henrymbugua
-ms.reviewer: saeeda, oldalton
+ms.reviewer: oldalton, brianmel
 ms.custom: aaddev
 ---
 # Handle errors and exceptions in MSAL for iOS/macOS
@@ -222,8 +221,6 @@ The following Objective-C sample code demonstrates best practices for handling s
     application.acquireTokenSilent(with: silentParameters, completionBlock: completionBlock)
 ```
 
----
-
 [!INCLUDE [Active directory error handling claims challenges](./includes/error-handling-and-tips/error-handling-claims-challenges.md)]
 
 MSAL for iOS and macOS allows you to request specific claims in both interactive and silent token acquisition scenarios.
@@ -236,4 +233,4 @@ See [Request custom claims using MSAL for iOS and macOS](request-custom-claims.m
 
 ## Next steps
 
-Consider enabling [Logging in MSAL for iOS/macOS](msal-logging-ios.md) to help you diagnose and debug issues.
+Consider enabling [Logging in MSAL for iOS/macOS](logging-ios.md) to help you diagnose and debug issues.
