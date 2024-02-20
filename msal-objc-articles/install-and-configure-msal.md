@@ -141,9 +141,7 @@ If your project is managed in a git repository you can include MSAL as a git sub
 
 3. Add a new keychain group to your project Capabilities. Keychain group should be `com.microsoft.adalcache` on iOS and `com.microsoft.identity.universalstorage` on macOS. 
 
-![](Images/keychain_example.png)
-
-See more information about [keychain groups](https://docs.microsoft.com/en-us/entra/identity-platform/howto-v2-keychain-objc) and [Silent SSO for MSAL](https://docs.microsoft.com/en-us/entra/identity-platform/single-sign-on-macos-ios).
+See more information about [keychain groups](/entra/identity-platform/howto-v2-keychain-objc) and [Silent SSO for MSAL](/entra/identity-platform/single-sign-on-macos-ios).
 
 #### iOS only steps:
 
@@ -172,7 +170,7 @@ Note that “msauthv3” scheme is needed when compiling your app with Xcode 11 
 	<string>msauthv3</string>
 </array>
 ```
-See more info about [configuring redirect uri for MSAL](https://docs.microsoft.com/en-us/entra/identity-platform/reply-url)
+See more info about [configuring redirect uri for MSAL](/entra/identity-platform/reply-url)
 
 3. To handle a callback, add the following to `appDelegate`:
 

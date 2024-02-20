@@ -16,7 +16,7 @@ ms.custom: aaddev
 
 # Configure MSAL for iOS and macOS to use different identity providers
 
-This article will show you how to configure your Microsoft Authentication Library app for iOS and macOS (MSAL) for different authorities such as Microsoft Entra ID, Business-to-Consumer (B2C), sovereign clouds, and guest users.  Throughout this article, you can generally think of an authority as an identity provider.
+This article will show you how to configure your Microsoft Authentication Library (MSA) app for iOS and macOS for different authorities such as Microsoft Entra ID, Business-to-Consumer (B2C), sovereign clouds, and guest users.  Throughout this article, you can generally think of an authority as an identity provider.
 
 ## Default authority configuration
 
@@ -31,7 +31,7 @@ In some scenarios, such as business-to-consumer (B2C), you may need to change th
 
 ### B2C
 
-To work with B2C, the [Microsoft Authentication Library (MSAL)](reference-v2-libraries.md) requires a different authority configuration. MSAL recognizes one authority URL format as B2C by itself. The recognized B2C authority format is `https://<host>/tfp/<tenant>/<policy>`, for example `https://login.microsoftonline.com/tfp/contoso.onmicrosoft.com/B2C_1_SignInPolicy`. However, you can also use any other supported B2C authority URLs by declaring authority as B2C authority explicitly.
+To work with B2C, MSAL requires a different authority configuration. MSAL recognizes one authority URL format as B2C by itself. The recognized B2C authority format is `https://<host>/tfp/<tenant>/<policy>`, for example `https://login.microsoftonline.com/tfp/contoso.onmicrosoft.com/B2C_1_SignInPolicy`. However, you can also use any other supported B2C authority URLs by declaring authority as B2C authority explicitly.
 
 To support an arbitrary URL format for B2C, `MSALB2CAuthority` can be set with an arbitrary URL, like this:
 

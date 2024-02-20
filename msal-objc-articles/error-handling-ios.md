@@ -221,8 +221,6 @@ The following Objective-C sample code demonstrates best practices for handling s
     application.acquireTokenSilent(with: silentParameters, completionBlock: completionBlock)
 ```
 
----
-
 [!INCLUDE [Active directory error handling claims challenges](./includes/error-handling-and-tips/error-handling-claims-challenges.md)]
 
 MSAL for iOS and macOS allows you to request specific claims in both interactive and silent token acquisition scenarios.
@@ -235,4 +233,4 @@ See [Request custom claims using MSAL for iOS and macOS](request-custom-claims.m
 
 ## Next steps
 
-Consider enabling [Logging in MSAL for iOS/macOS](msal-logging-ios.md) to help you diagnose and debug issues.
+Consider enabling [Logging in MSAL for iOS/macOS](logging-ios.md) to help you diagnose and debug issues.

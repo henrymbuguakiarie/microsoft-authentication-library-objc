@@ -24,7 +24,7 @@ This platform allows you to easily target several identities including Azure AD 
 
 The MSAL documentation covers common patterns, error handling and debugging best practices, extra library functionality (such as logging, telemetry), and any active bugs or common issues with known mitigations. If you're looking for more help getting started with Microsoft Entra ID, Microsoft Accounts, or Azure AD B2C, check out the [Microsoft identity platform docs](https://aka.ms/aaddev). If you're looking for more info about the Microsoft Graph API, check out the [Microsoft Graph docs](https://graph.microsoft.io).
 
-1. Learn the differences between MSAL for iOS and macOS(./getting-started/scenarios.md).
+1. Learn the differences between MSAL for iOS and macOS
 1. You will need to [register your app](/entra/identity-platform/quickstart-register-app) with Microsoft Entra
 1. Learn how to install MSAL
 1. Learn how to configure MSAL [acquiring tokens](acquire-tokens.md) to access a protected API.
