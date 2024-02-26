@@ -40,8 +40,12 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "brand": "entra",
+      "uhfHeaderId": "MSDocsHeader-Entra",
       "breadcrumb_path": "/entra/msal/objc/breadcrumb/toc.json",
-      "feedback_system": "Standard",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/microsoft-authentication-library-objc",
+      "feedback_product_url": "https://github.com/AzureAD/microsoft-authentication-library-for-objc/iss",
       "permissioned-type": "public"
     },
     "fileMetadata": {},
