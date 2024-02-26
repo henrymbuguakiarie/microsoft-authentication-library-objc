@@ -1,10 +1,6 @@
-- name: Microsoft Authentication Library for iOS and macOS
-  expanded: true
-  items:
   - name: MSAL for iOS and macOS overview
     href: index.md
   - name: Get started
-    expanded: true
     items:
     - name: Install MSAL and configure your project
       href: install-and-configure-msal.md
@@ -40,5 +36,5 @@
       href: migrate-objc-adal-msal.md
     - name: Use shared device mode for iOS devices
       href: shared-devices-ios.md
-- name: MSAL iOS and macOS SDK reference
-  href: https://azuread.github.io/microsoft-authentication-library-for-objc/
+  - name: MSAL iOS and macOS SDK reference
+    href: https://azuread.github.io/microsoft-authentication-library-for-objc/
