@@ -154,4 +154,3 @@ MSALSilentTokenParameters *silentParams = [[MSALSilentTokenParameters alloc] ini
 
 Occasionally user interaction will be required to get a new access token, when this occurs you will receive a `MSALErrorInteractionRequired` error when trying to silently acquire a new token. In those cases call `acquireToken:` with the same account and scopes as the failing `acquireTokenSilent:` call. It is recommended to display a status message to the user in an unobtrusive way before invoking interactive `acquireToken:` call.
 
-For more information, please see [MSAL error handling guide](/entra/identity-platform/msal-handling-exceptions).
