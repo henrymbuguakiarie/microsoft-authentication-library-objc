@@ -84,7 +84,7 @@ Microsoft Authentication Library (MSAL) for iOS and macOS is the supported libra
 
 ## Samples
 
-See [our comprehensive sample list](/entra/identity-platform/active-directory-v2-code-samples).
+See [our comprehensive sample list](/entra/identity-platform/sample-v2-code?tabs=apptype#mobile).
 
 ## Get help with the SDK
 
