@@ -22,7 +22,7 @@ Using MSAL for iOS and macOS, you can acquire security tokens from the Microsoft
 
 #### Native authentication support in MSAL
 
-MSAL iOS provides native authentication APIs that allow applications to implement a native experience with end-to-end customizable flows in their mobile applications. With native authentication, users are guided through a rich, native, mobile-first sign-up and sign-in journey without leaving the app. The native authentication feature is only available for mobile apps on [External ID for customers](https://learn.microsoft.com/en-us/entra/external-id/customers/concept-native-authentication). macOS is not supported. It is recommended to always use the most up-to-date version of the SDK.
+MSAL iOS provides native authentication APIs that allow applications to implement a native experience with end-to-end customizable flows in their mobile applications. With native authentication, users are guided through a rich, native, mobile-first sign-up and sign-in journey without leaving the app. The native authentication feature is only available for mobile apps on [External ID for customers](/entra/external-id/customers/concept-native-authentication). macOS is not supported. It is recommended to always use the most up-to-date version of the SDK.
 
 ## Getting started with MSAL for iOS and macOS conceptual documentation
 
@@ -31,15 +31,15 @@ The MSAL documentation covers common patterns, error handling and debugging best
 
 1. Learn the differences between MSAL for iOS and macOS
 1. [Register your app](/entra/identity-platform/quickstart-register-app) with Microsoft Entra
-1. [Install MSAL for iOS and macOS and configure your project](i) to use the library
-1. [Acquire tokens]() to access a protected API
+1. [Install MSAL for iOS and macOS and configure your project](install-and-configure-msal.md) to use the library
+1. [Acquire tokens](acquire-tokens.md) to access a protected API
 
 
 To use MSAL iOS and macOS in your application, you need to register your application in the Microsoft Entra Admin center and configure your project. Since the SDK supports both browser-delegated and native authentication experiences, follow the steps in the one of these quickstarts based on your scenario.
 
 * For browser-delegated authentication scenarios, refer to the quickstart, [Sign in users and call Microsoft Graph from an iOS or macOS app](/entra/identity-platform/quickstart-mobile-app-ios-sign-in).
 
-* For native authentication scenarios on iOS apps, refer to the Microsoft Entra External ID sample guide, [Run iOS sample app](entra/external-id/customers/how-to-run-native-authentication-sample-ios-app).
+* For native authentication scenarios on iOS apps, refer to the Microsoft Entra External ID sample guide, [Run iOS sample app](/entra/external-id/customers/how-to-run-native-authentication-sample-ios-app).
 
 ## Supported Versions
 
