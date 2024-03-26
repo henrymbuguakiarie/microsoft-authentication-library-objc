@@ -20,6 +20,7 @@ ms.custom: aaddev
 ## Installing  using CocoaPods
 
 #### Installing CocoaPods
+
 [CocoaPods](https://cocoapods.org) is a dependency manager for Swift and Objective-C Cocoa projects.
 It can be installed as a ruby gem, by using the following command.
 ```
@@ -28,14 +29,33 @@ $ sudo gem install cocoapods
 > Depending on your Ruby setup, `sudo` may or may not be needed.
 
 #### Include MSAL in Podfile
-Create a new `Podfile` or add to the existing podfile, include `pod 'MSAL'` under `target. 
 
-An example Podfile:
+**For browser-delegated authentication:**
+
+You can use [CocoaPods](http://cocoapods.org/) to install `MSAL` by adding it to your `Podfile` under target:
+
 ```
-target "your-target-here" do
-    pod 'MSAL'
+use_frameworks!
+ 
+target 'your-target-here' do
+	pod 'MSAL'
 end
 ```
+
+**For native-authentication:**
+
+To use the native authentication capabilities provided by MSAL in your iOS application, you need to specify `native-auth` as subspec for the `MSAL` dependency as follows:
+
+```
+use_frameworks!
+ 
+target 'your-target-here' do
+	pod 'MSAL/native-auth'
+end
+```
+
+If you're using the `native-auth` subspec, you must include the `use_frameworks!` setting in your `Podfile`.
+
 
 Note: if you're checking out a particular branch or tag of MSAL, you will need to add the :submodules => true flag to your podfile, so that CocoaPods finds MSAL dependencies
 
@@ -107,16 +127,6 @@ Workarounds for some bugs we encountered :
 * While archiving, error : “IPA processing failed” UserInfo={NSLocalizedDescription=IPA processing failed}. [Workaround](https://github.com/AzureAD/microsoft-authentication-library-for-objc/issues/737#issuecomment-767990771)
 * For a macOS app, “Command CodeSign failed with a nonzero exit code” error. [Workaround](https://github.com/AzureAD/microsoft-authentication-library-for-objc/issues/737#issuecomment-770056675)
 
-## Install MSAL manually
-
-1. Check out the repository using the following command.
-```
-git clone https://github.com/AzureAD/microsoft-authentication-library-for-objc.git --recursive
-```
-
-2. In your project, drag and add `microsoft-authentication-library-for-objc/MSAL/MSAL.xcodeproj`
-3. In your project settings, for the target application, select `Build Phases` and add MSAL in `Target Dependencies`.
-
 ## Install MSAL using Git Submodule
 
 If your project is managed in a git repository you can include MSAL as a git submodule. First check the GitHub Releases Page for the latest release tag. Replace <latest_release_tag> with that version.
@@ -134,7 +144,7 @@ If your project is managed in a git repository you can include MSAL as a git sub
 
 ### Adding MSAL to your project
 
-1. Register your app in the [Azure portal](https://aka.ms/MobileAppReg)
+1. Register your app in the [Microsoft Entra Admin Center](https://entra.microsoft.com/signin/index/).
 2. Make sure you register a redirect URI for your application. It should be in the following format: 
 
  `msauth.$(PRODUCT_BUNDLE_IDENTIFIER)://auth`

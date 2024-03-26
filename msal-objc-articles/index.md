@@ -8,7 +8,7 @@ manager: CelesteDG
 ms.service: msal
 ms.subservice: msal-ios-mac
 ms.topic: conceptual
-ms.date: 02/19/2024
+ms.date: 03/26/2024
 ms.author: dmwendia
 ms.reviewer: oldalton, brianmel
 ms.custom: aaddev
@@ -16,20 +16,30 @@ ms.custom: aaddev
 
 # Microsoft Authentication Library for iOS and macOS
 
-The Microsoft Authentication Library (MSAL) for iOS and macOS is an Auth SDK that can be used to seamlessly integrate authentication into your apps using industry standard OAuth2 and OpenID Connect.. It allows you to easily target several identities including Microsoft Entra ID (Work and School accounts), Microsoft Accounts (Outlook.com, hotmail.com, and several others), or Azure AD B2C (Social and Local accounts). 
+The Microsoft Authentication Library (MSAL) for iOS and macOS is an auth SDK that can be used to seamlessly integrate authentication into your apps using industry standard OAuth2 and OpenID Connect. It allows you to sign in users or apps with Microsoft identities. These identities include Microsoft Entra ID work and school accounts, personal Microsoft accounts, social accounts, and customer accounts. 
 
-This platform allows you to easily target several identities including Azure AD (Work and School accounts), Microsoft account (Outlook.com, hotmail.com, and several others), or Azure AD B2C (Social and Local accounts).  Your app will then have access to the entire set of Microsoft cloud APIs including the Microsoft Graph, Office 365, Azure, and any API you want to protect.  
+Using MSAL for iOS and macOS, you can acquire security tokens from the Microsoft identity platform to authenticate users and access secure web APIs for their applications. The library supports multiple authentication scenarios, such as single sign-on (SSO), Conditional Access, and brokered authentication. 
+
+#### Native authentication support in MSAL
+
+MSAL iOS provides native authentication APIs that allow applications to implement a native experience with end-to-end customizable flows in their mobile applications. With native authentication, users are guided through a rich, native, mobile-first sign-up and sign-in journey without leaving the app. The native authentication feature is only available for mobile apps on [External ID for customers](https://learn.microsoft.com/en-us/entra/external-id/customers/concept-native-authentication). macOS is not supported. It is recommended to always use the most up-to-date version of the SDK.
 
 ## Getting started with MSAL for iOS and macOS conceptual documentation
 
-The MSAL documentation covers common patterns, error handling and debugging best practices, extra library functionality (such as logging, telemetry), and any active bugs or common issues with known mitigations. If you're looking for more help getting started with Microsoft Entra ID, Microsoft Accounts, or Azure AD B2C, check out the [Microsoft identity platform docs](https://aka.ms/aaddev). If you're looking for more info about the Microsoft Graph API, check out the [Microsoft Graph docs](https://graph.microsoft.io).
+The MSAL documentation covers common patterns, error handling and debugging best practices, extra library functionality (such as logging, telemetry), and any active bugs or common issues with known mitigations. If you're looking for more help getting started with Microsoft Entra ID, Microsoft Accounts, or Azure AD B2C, check out the [Microsoft identity platform docs](https://aka.ms/aaddev). If you're looking for more info about the Microsoft Graph API, check out the [Microsoft Graph docs](https://graph.microsoft.io). To effectively use MSAL iOS and macOS to protect your applications, it's important to familiarize yourself with the following concepts:
+
 
 1. Learn the differences between MSAL for iOS and macOS
-1. You will need to [register your app](/entra/identity-platform/quickstart-register-app) with Microsoft Entra
-1. Learn how to install MSAL
-1. Learn how to configure MSAL [acquiring tokens](acquire-tokens.md) to access a protected API.
-1. Learn how to acquire  tokens
+1. [Register your app](/entra/identity-platform/quickstart-register-app) with Microsoft Entra
+1. [Install MSAL for iOS and macOS and configure your project](i) to use the library
+1. [Acquire tokens]() to access a protected API
 
+
+To use MSAL iOS and macOS in your application, you need to register your application in the Microsoft Entra Admin center and configure your project. Since the SDK supports both browser-delegated and native authentication experiences, follow the steps in the one of these quickstarts based on your scenario.
+
+* For browser-delegated authentication scenarios, refer to the quickstart, [Sign in users and call Microsoft Graph from an iOS or macOS app](/entra/identity-platform/quickstart-mobile-app-ios-sign-in).
+
+* For native authentication scenarios on iOS apps, refer to the Microsoft Entra External ID sample guide, [Run iOS sample app](entra/external-id/customers/how-to-run-native-authentication-sample-ios-app).
 
 ## Supported Versions
 
@@ -80,7 +90,8 @@ For Conditional Access scenarios, there will be fewer user prompts when you use 
 
 ## Migration from Azure Active Directory Authentication Library (ADAL)
 
-Microsoft Authentication Library (MSAL) for iOS and macOS is the supported library that can be used for authentication token acquisition. If you or your organization are using the Azure Active Directory Authentication Library (ADAL), you should [migrate to MSAL](/entra/identity-platform/msal-migration). ADAL was deprecated on **June 30, 2023**.
+The Azure Active Directory Authentication Library (ADAL) for Objective-C has been deprecated effective **June 30, 2023**.. If you or your organization are using the Azure Active Directory Authentication Library (ADAL), you should [migrate to MSAL](migrate-objc-adal-msal.md) to avoid putting your app's security at risk.
+
 
 ## Samples
 
