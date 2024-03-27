@@ -2,8 +2,7 @@
 author: davidmu1
 ms.author: davidmu
 ms.date: 10/22/2020
-ms.service: active-directory
-ms.subservice: develop
+ms.service: identity-platform
 ms.topic: include
 # Purpose:
 # Ingested by Microsoft identity platform articles in /articles/active-directory/develop/* that document public preview features.
