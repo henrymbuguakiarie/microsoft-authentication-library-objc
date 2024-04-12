@@ -177,4 +177,4 @@ Providing correlation IDs and timestamps are helpful for tracking down issues. T
 
 ## Next steps
 
-For more code samples, refer to [Microsoft identity platform code samples](/entra/identity-platform/sample-v2-code.md).
+For more code samples, refer to [Microsoft identity platform code samples](/entra/identity-platform/sample-v2-code).
