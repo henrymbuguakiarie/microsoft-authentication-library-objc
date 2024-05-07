@@ -16,9 +16,6 @@ ms.custom: aaddev
 
 # Shared device mode for iOS devices
 
-> [!IMPORTANT]
-> This feature [!INCLUDE [PREVIEW BOILERPLATE](./includes/develop-preview.md)]
-
 Frontline workers such as retail associates, flight crew members, and field service workers often use a shared mobile device to perform their work. These shared devices can present security risks if your users share their passwords or PINs, intentionally or not, to access customer and business data on the shared device.
 
 [Shared device mode](/entra/identity-platform/msal-shared-devices) allows you to configure an iOS 14 or higher device to be more easily and securely shared by employees. Employees can sign-in once and get single sign-on (SSO) to all apps that support this feature, giving them faster access to information. When they're finished with their shift or task, they can sign out of the device through any supported app that also signs them out from all apps supporting this feature, and the device is immediately ready for use by the next employee with no access to previous user's data.
