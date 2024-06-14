@@ -8,7 +8,7 @@ manager: CelesteDG
 ms.service: msal
 ms.subservice: msal-ios-mac
 ms.topic: conceptual
-ms.date: 02/19/2024
+ms.date: 06/14/2024
 ms.author: henrymbugua
 ms.reviewer: oldalton, brianmel
 ms.custom: aaddev
